@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>se.fk.codestandard</groupId>
+		<artifactId>fk-code-standard-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<packaging>jar</packaging>
+	<artifactId>fk-code-standard-maven-plugin-example</artifactId>
+	<name>fk-code-standard-maven-plugin-example</name>
+
+	<properties>
+		<fk-code-standard.version>1.0.0-SNAPSHOT</fk-code-standard.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>se.fk.codestandard</groupId>
+				<artifactId>fk-code-standard-maven-plugin</artifactId>
+				<version>${fk-code-standard.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>spotlessCheck</goal>
+							<goal>spotlessApply</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

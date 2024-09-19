@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+buildscript {
+  repositories {
+    maven { url 'https://repo1.maven.org/maven2/' }
+    mavenLocal()
+  }
+  dependencies {
+      classpath 'se.fk.codestandard:fk-code-standard-gradle-plugin:+'
+  }
+}
+
+apply plugin: "se.fk.codestandard.gradle.FKCodeStandard"

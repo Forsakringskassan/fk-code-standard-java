@@ -1,0 +1,18 @@
+<lifecycleMappingMetadata>
+    <pluginExecutions>
+        <pluginExecution>
+            <pluginExecutionFilter>
+                <goals>
+                    <goal>spotlessApply</goal>
+                    <goal>spotlessCheck</goal>
+                </goals>
+            </pluginExecutionFilter>
+            <action>
+                <execute>
+                    <runOnIncremental>true</runOnIncremental>
+                    <runOnConfiguration>false</runOnConfiguration>
+                </execute>
+            </action>
+        </pluginExecution>
+    </pluginExecutions>
+</lifecycleMappingMetadata>

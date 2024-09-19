@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<packaging>pom</packaging>
+
+	<groupId>se.fk.codestandard</groupId>
+	<artifactId>fk-code-standard-parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>fk-code-standard-parent</name>
+
+	<repositories>
+		<repository>
+			<id>repo.gradle.org</id>
+			<url>https://repo.gradle.org/ui/native/libs-releases/</url>
+		</repository>
+		<repository>
+			<id>java-all</id>
+			<url>https://repo1.maven.org/maven2/</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+	</properties>
+
+	<modules>
+		<module>fk-code-standard-gradle-plugin</module>
+		<module>fk-code-standard-maven-plugin</module>
+		<module>fk-code-standard-maven-plugin-example</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<configuration>
+						    <target>
+						        <mkdir dir="${basedir}/fk-code-standard-gradle-plugin/src/main/resources/" />
+						        <copy todir="${basedir}/fk-code-standard-gradle-plugin/src/main/resources/">
+						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml" />
+						        </copy>
+						        <mkdir dir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/" />
+						        <copy todir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/">
+						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml" />
+						        </copy>
+						    </target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
