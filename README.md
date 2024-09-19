@@ -75,3 +75,33 @@ In a CI environment, where you may want to verify the code standard, the automat
 ```sh
 ./mvnw verify -Pskip-automatic-fk-code-standard-apply=true
 ```
+
+## Eclipse update site
+
+Many organizations will probably block `download.eclipse.org`. Spotless has a feature that lets you rewrite those calls to something that is reachable internally in your organization. Search for `p2Mirror` in this repo and you will find what to change.
+
+Still, it might be hard to setup an internal Eclipse update site and get these files. You can get the files by running Wiremock somewhere with full Internet access:
+
+```sh
+npx wiremock \
+ --root-dir eclipsedownload \
+ --record-mappings \
+ --proxy-all https://download.eclipse.org/eclipse/ \
+ --verbose
+```
+
+And changing `p2Mirror` like:
+
+```sh
+eclipse.withP2Mirrors(Map.of(
+"https://download.eclipse.org/eclipse/updates/" + eclipseVersion + "/",
+"http://localhost:8080/updates/"+eclipseVersion+"/"));
+```
+
+After that you will have the Wiremock mappings in folder `eclipsedownload`. Zip that folder and bring it inside you organization. Run in there with:
+
+```sh
+npx wiremock --verbose
+```
+
+Now you have a mocked update site on `localhost` and you should be able to run it without access to `download.eclipse.org` by just changing the `p2Mirror` like above. Not a permanent solution, but will help you try it out and collect the files you need to host internally.
