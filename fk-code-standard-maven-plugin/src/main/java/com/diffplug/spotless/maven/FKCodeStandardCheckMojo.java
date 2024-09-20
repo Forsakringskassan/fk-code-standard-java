@@ -59,7 +59,7 @@ public class FKCodeStandardCheckMojo extends AbstractFKCodeStandardMojo {
 
 		if (!problemFiles.isEmpty()) {
 			throw new MojoExecutionException(
-					DiffMessageFormatter.builder().runToFix(""Run './mvnw se.fk.codestandard:fk-code-standard-maven-plugin:spotlessApply' to fix these violations.")
+					DiffMessageFormatter.builder().runToFix("Run './mvnw se.fk.codestandard:fk-code-standard-maven-plugin:spotlessApply' to fix these violations.")
 							.formatter(formatter).problemFiles(problemFiles).getMessage());
 		}
 	}
