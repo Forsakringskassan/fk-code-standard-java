@@ -98,10 +98,12 @@ eclipse.withP2Mirrors(Map.of(
 "http://localhost:8080/updates/"+eclipseVersion+"/"));
 ```
 
-After that you will have the Wiremock mappings in folder `eclipsedownload`. Zip that folder and bring it inside you organization. Run in there with:
+Run the `build-and-test.sh` script to make it invoke Wiremock.
+
+After that you will have the Wiremock mappings in folder `eclipsedownload`. Bring that folder inside your organization. Run in there with:
 
 ```sh
 npx wiremock --verbose
 ```
 
-Now you have a mocked update site on `localhost` and you should be able to run it without access to `download.eclipse.org` by just changing the `p2Mirror` like above. Not a permanent solution, but will help you try it out and collect the files you need to host internally.
+Now you have a mocked update site on `localhost` and you should be able to run it without access to `download.eclipse.org` by changing the `p2Mirror` like above. Not a permanent solution, but will help you try it out and collect the files you need to host internally.
