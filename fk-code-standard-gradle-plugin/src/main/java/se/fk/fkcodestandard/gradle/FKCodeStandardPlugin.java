@@ -41,18 +41,6 @@ public class FKCodeStandardPlugin implements Plugin<Project> {
 //					"https://repo1.maven.org/maven2/Eclipse_" + eclipseVersion + "/"));
 		});
 
-		spotlessExtension.groovyGradle(spotlessGroovyExtension -> {
-			spotlessJavaExtension.target('*.gradle', 'src/main/**/*.gradle');
-			spotlessJavaExtension.greclipse()
-		})
-
-		spotlessExtension.json(jsonExtension -> {
-			jsonExtension.target('*.json', 'src/main/**/*.json', 'src/test/**/*.json', 'mocks/**/*.json');
-			jsonExtension.gson()
-				.indentWithSpaces(2)
-				.version('2.8.1')
-		})
-
 		project.getExtensions().add("fkSpotlessExtension", spotlessExtension);
 
 		project.getTasksByName("check", true).forEach(checkTask -> {
