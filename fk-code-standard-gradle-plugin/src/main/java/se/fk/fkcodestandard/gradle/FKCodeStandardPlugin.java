@@ -55,6 +55,12 @@ public class FKCodeStandardPlugin implements Plugin<Project> {
 
 		project.getExtensions().add("fkSpotlessExtension", spotlessExtension);
 
+		project.getTasksByName("assemble", true).forEach(assembleTask -> {
+			assembleTask.doLast(t -> {
+				getLocalCodeStandard(project);
+			});
+		});
+
 		project.getTasksByName("check", true).forEach(checkTask -> {
 			final boolean shouldFormat = project.getProperties().get(PROP_SKIP_APPLY) == null;
 			if (shouldFormat) {
