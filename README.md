@@ -8,6 +8,8 @@ There are, currently, no published releases of this project. The value here, for
 
 ## Gradle
 
+**There is now a new plugin for this here**: https://github.com/Forsakringskassan/gradle-conventions
+
 There is a running example [in this repo](/fk-code-standard-gradle-plugin-example). The plugin can be applied like this:
 
 ```groovy
