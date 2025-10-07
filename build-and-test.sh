@@ -11,17 +11,6 @@ cd $SCRIPT_DIR
 
 
 #
-# Test Gradle plugin
-#
-cd $SCRIPT_DIR/fk-code-standard-gradle-plugin-example
-echo " " >> src/main/java/example/Example.java
-(./gradlew spotlessCheck && exit 1) || echo "Should fail invalid format"
-(./gradlew Build -Pskip-automatic-fk-code-standard-apply=true && exit 1) || echo "Should fail invalid format"
-./gradlew build
-./gradlew spotlessApply
-./gradlew spotlessCheck
-
-#
 # Test Maven plugin
 #
 cd $SCRIPT_DIR/fk-code-standard-maven-plugin-example

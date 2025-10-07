@@ -13,10 +13,6 @@
 
 	<repositories>
 		<repository>
-			<id>repo.gradle.org</id>
-			<url>https://repo.gradle.org/ui/native/libs-releases/</url>
-		</repository>
-		<repository>
 			<id>java-all</id>
 			<url>https://repo1.maven.org/maven2/</url>
 		</repository>
@@ -29,7 +25,6 @@
 	</properties>
 
 	<modules>
-		<module>fk-code-standard-gradle-plugin</module>
 		<module>fk-code-standard-maven-plugin</module>
 		<module>fk-code-standard-maven-plugin-example</module>
 	</modules>
@@ -44,10 +39,6 @@
 						<phase>generate-sources</phase>
 						<configuration>
 						    <target>
-						        <mkdir dir="${basedir}/fk-code-standard-gradle-plugin/src/main/resources/" />
-						        <copy todir="${basedir}/fk-code-standard-gradle-plugin/src/main/resources/">
-						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml" />
-						        </copy>
 						        <mkdir dir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/" />
 						        <copy todir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/">
 						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml" />

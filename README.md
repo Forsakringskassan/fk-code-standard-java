@@ -6,38 +6,6 @@ It uses [Spotless](https://github.com/diffplug/spotless) and configures its Ecli
 
 There are, currently, no published releases of this project. The value here, for anyone outside of FK, is a template to use for defining your opinionated code standard within your organization.
 
-## Gradle
-
-**There is now a new plugin for this here**: https://github.com/Forsakringskassan/gradle-conventions
-
-There is a running example [in this repo](/fk-code-standard-gradle-plugin-example). The plugin can be applied like this:
-
-```groovy
-buildscript {
-  dependencies {
-      classpath 'se.fk.codestandard:fk-code-standard-gradle-plugin:X'
-  }
-}
-
-apply plugin: "se.fk.codestandard.gradle.FKCodeStandard"
-```
-
-It will run during `./gradlew build` but can also be invoked like:
-
-```sh
-./gradlew spotlessApply
-```
-
-```sh
-./gradlew spotlessCheck
-```
-
-In a CI environment, where you may want to verify the code standard, the automatic formatting can be turned off with:
-
-```sh
-./gradlew build -Pskip-automatic-fk-code-standard-apply=true
-```
-
 ## Maven
 
 There is a running example [in this repo](/fk-code-standard-maven-plugin-example). The plugin can be applied like this in `pom.xml`:
