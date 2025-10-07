@@ -6,6 +6,8 @@ It uses [Spotless](https://github.com/diffplug/spotless) and configures its Ecli
 
 There are, currently, no published releases of this project. The value here, for anyone outside of FK, is a template to use for defining your opinionated code standard within your organization.
 
+When using Gradle, there is [gradle-conventions](https://github.com/Forsakringskassan/gradle-conventions).
+
 ## Maven
 
 There is a running example [in this repo](/fk-code-standard-maven-plugin-example). The plugin can be applied like this in `pom.xml`:
