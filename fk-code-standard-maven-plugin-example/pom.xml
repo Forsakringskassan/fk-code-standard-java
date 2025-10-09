@@ -4,16 +4,16 @@
 	<parent>
 		<groupId>se.fk.codestandard</groupId>
 		<artifactId>fk-code-standard-parent</artifactId>
-		<version>1.0.2</version>
+		<version>1.0.3-SNAPSHOT</version>
 	</parent>
 
 	<packaging>jar</packaging>
 	<artifactId>fk-code-standard-maven-plugin-example</artifactId>
 	<name>fk-code-standard-maven-plugin-example</name>
-	<version>1.0.2</version>
+	<version>1.0.3-SNAPSHOT</version>
 
 	<properties>
-		<fk-code-standard.version>1.0.2</fk-code-standard.version>
+		<fk-code-standard.version>1.0.3-SNAPSHOT</fk-code-standard.version>
 	</properties>
 
 	<build>
