@@ -1,0 +1,7 @@
+name: Bundle Maven Release
+
+on: [workflow_dispatch]
+
+jobs:
+  call-workflow:
+    uses: Forsakringskassan/.github/.github/workflows/bundle-maven-release.yaml@main

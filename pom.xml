@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<packaging>pom</packaging>
@@ -18,10 +15,26 @@
 		</repository>
 	</repositories>
 
+	<scm>
+		<connection>scm:git:https://github.com/Forsakringskassan/fk-code-standard-java.git</connection>
+		<developerConnection>scm:git:https://github.com/Forsakringskassan/fk-code-standard-java.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/Forsakringskassan/fk-code-standard-java</url>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+		<id>github--Forsakringskassan--fk-code-standard-java</id>
+		<name>GitHub Packages</name>
+		<url>https://maven.pkg.github.com/Forsakringskassan/fk-code-standard-java</url>
+		</repository>
+	</distributionManagement>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>17</maven.compiler.target>
 		<maven.compiler.source>17</maven.compiler.source>
+    	<release.plugin.version>3.1.1</release.plugin.version>
 	</properties>
 
 	<modules>
@@ -39,9 +52,9 @@
 						<phase>generate-sources</phase>
 						<configuration>
 						    <target>
-						        <mkdir dir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/" />
+						        <mkdir dir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/"/>
 						        <copy todir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/">
-						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml" />
+						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml"/>
 						        </copy>
 						    </target>
 						</configuration>
@@ -50,6 +63,18 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${release.plugin.version}</version>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<goals>deploy</goals>
+					<checkModificationExcludes>
+						<checkModificationExclude>pom.xml</checkModificationExclude>
+					</checkModificationExcludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

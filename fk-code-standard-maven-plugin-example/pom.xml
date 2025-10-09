@@ -13,6 +13,7 @@
 	<packaging>jar</packaging>
 	<artifactId>fk-code-standard-maven-plugin-example</artifactId>
 	<name>fk-code-standard-maven-plugin-example</name>
+	<version>1.0.0-SNAPSHOT</version>
 
 	<properties>
 		<fk-code-standard.version>1.0.0-SNAPSHOT</fk-code-standard.version>

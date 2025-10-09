@@ -14,6 +14,7 @@
 
 	<artifactId>fk-code-standard-maven-plugin</artifactId>
 	<name>fk-code-standard-maven-plugin</name>
+	<version>1.0.0-SNAPSHOT</version>
 
 	<dependencies>
 		<!-- Plugin dev //-->
