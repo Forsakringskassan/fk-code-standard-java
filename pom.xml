@@ -5,7 +5,7 @@
 
 	<groupId>se.fk.codestandard</groupId>
 	<artifactId>fk-code-standard-parent</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>fk-code-standard-parent</name>
 
 	<repositories>
@@ -52,9 +52,9 @@
 						<phase>generate-sources</phase>
 						<configuration>
 						    <target>
-						        <mkdir dir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/" />
+						        <mkdir dir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/"/>
 						        <copy todir="${basedir}/fk-code-standard-maven-plugin/src/main/resources/">
-						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml" />
+						            <fileset dir="${basedir}" includes="code-standard-java-eclipse.xml"/>
 						        </copy>
 						    </target>
 						</configuration>
