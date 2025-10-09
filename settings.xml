@@ -1,45 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0  http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <pluginGroups>
-    </pluginGroups>
-
-    <mirrors>
-        <mirror>
-            <id>Nexus</id>
-            <mirrorOf>central</mirrorOf>
-            <name>Nexus Public</name>
-            <url>https://repo1.maven.org/maven2/</url>
-        </mirror>
-        <mirror>
-            <id>Gradle-Libs</id>
-            <mirrorOf>central</mirrorOf>
-            <name>Gradle Libs</name>
-            <url>https://repo.gradle.org/gradle/libs-releases/</url>
-        </mirror>
-    </mirrors>
-
-    <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <repositories>
-                <repository>
-                    <id>Nexus-public</id>
-                    <name>Public Repositories</name>
-                    <url>https://repo1.maven.org/maven2/</url>
-                    <layout>default</layout>
-                </repository>
-                <repository>
-                    <id>Gradle-Libs</id>
-                    <name>Gradle Libs</name>
-                    <url>https://repo.gradle.org/gradle/libs-releases/</url>
-                    <layout>default</layout>
-                </repository>
-            </repositories>
-        </profile>
-    </profiles>
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <servers>
+    <server>
+      <id>github--Forsakringskassan</id>
+      <username>${env.GITHUB_ACTOR}</username>
+      <password>${env.GITHUB_TOKEN}</password>
+    </server>
+  </servers>
 </settings>
