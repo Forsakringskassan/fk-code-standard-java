@@ -16,7 +16,7 @@ jobs:
         os: [ 'ubuntu-latest' ]
     name: Java ${{ matrix.Java }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
         with:
           fetch-depth: '1'
       - name: Setup java
