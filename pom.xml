@@ -5,7 +5,7 @@
 
 	<groupId>se.fk.codestandard</groupId>
 	<artifactId>fk-code-standard-parent</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6-SNAPSHOT</version>
 	<name>fk-code-standard-parent</name>
 
 	<repositories>
@@ -18,7 +18,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/Forsakringskassan/fk-code-standard-java.git</connection>
 		<developerConnection>scm:git:https://github.com/Forsakringskassan/fk-code-standard-java.git</developerConnection>
-		<tag>fk-code-standard-parent-1.0.5</tag>
+		<tag>fk-code-standard-parent-1.0.0</tag>
 		<url>https://github.com/Forsakringskassan/fk-code-standard-java</url>
 	</scm>
 
