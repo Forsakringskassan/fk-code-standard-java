@@ -10,6 +10,8 @@ This plugin is included if you use the [fk-maven](https://github.com/Forsakrings
 
 When using Gradle, there is [gradle-conventions](https://github.com/Forsakringskassan/gradle-conventions).
 
+Published to https://github.com/Forsakringskassan/repository
+
 ## Maven
 
 There is a running example [in this repo](/fk-code-standard-maven-plugin-example). The plugin can be applied like this in `pom.xml`:
