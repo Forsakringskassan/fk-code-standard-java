@@ -24,9 +24,9 @@
 
 	<distributionManagement>
 		<repository>
-		<id>github--Forsakringskassan</id>
+		<id>github--Forsakringskassan--repository</id>
 		<name>GitHub Packages</name>
-		<url>https://maven.pkg.github.com/Forsakringskassan/fk-code-standard-java</url>
+		<url>https://maven.pkg.github.com/Forsakringskassan/repository</url>
 		</repository>
 	</distributionManagement>
 

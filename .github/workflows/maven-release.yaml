@@ -5,3 +5,6 @@ on: [workflow_dispatch]
 jobs:
   call-workflow:
     uses: Forsakringskassan/.github/.github/workflows/bundle-maven-release.yaml@main
+    secrets:
+      PACKAGES_RW_ACTOR: ${{ secrets.PACKAGES_RW_ACTOR }}
+      PACKAGES_RW_TOKEN: ${{ secrets.PACKAGES_RW_TOKEN }}
