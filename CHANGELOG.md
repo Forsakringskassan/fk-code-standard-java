@@ -2,7 +2,19 @@
 
 Changelog of fk-code-standard-java.
 
+## fk-code-standard-parent-1.1.0 (2025-10-10)
+
+### Features
+
+-  publicerar till gemensamt repository ([06383](https://github.com/Forsakringskassan/fk-code-standard-java/commit/0638328d7547962) Tomas Bjerre)  
+
+### Bug Fixes
+
+-  avoid releasing example ([e7793](https://github.com/Forsakringskassan/fk-code-standard-java/commit/e77930373700fb4) Tomas Bjerre)  
+
 ## fk-code-standard-parent-1.0.6 (2025-10-09)
+
+## 1.0.6 (2025-10-09)
 
 ### Dependency updates
 
