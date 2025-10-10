@@ -69,7 +69,7 @@
 		<dependency>
 			<groupId>com.diffplug.spotless</groupId>
 			<artifactId>spotless-lib-extra</artifactId>
-			<version>2.45.0</version>
+			<version>4.0.0</version>
 		</dependency>
 	</dependencies>
 
